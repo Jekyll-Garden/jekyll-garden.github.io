@@ -258,7 +258,7 @@ a {
   a strong {
     color: currentColor; }
   a:hover {
-    color: #363636; }
+    color: var(--color-bis); }
 
 code {
   background-color: var(--bg-sub);
@@ -993,7 +993,7 @@ a.box:active {
   background-color: var(--bg-main);
   border-color: var(--border);
   border-width: 1px;
-  color: #363636;
+  color: var(--color-bis);
   cursor: pointer;
   justify-content: center;
   padding-bottom: calc(0.5em - 1px);
@@ -1018,15 +1018,15 @@ a.box:active {
     margin-right: calc(-0.5em - 1px); }
   .button:hover, .button.is-hovered {
     border-color: #b5b5b5;
-    color: #363636; }
+    color: var(--color-bis); }
   .button:focus, .button.is-focused {
     border-color: #3273dc;
-    color: #363636; }
+    color: var(--color-bis); }
     .button:focus:not(:active), .button.is-focused:not(:active) {
       box-shadow: 0 0 0 0.125em rgba(35, 128, 237, 0.25); }
   .button:active, .button.is-active {
     border-color: #4a4a4a;
-    color: #363636; }
+    color: var(--color-bis); }
   .button.is-text {
     background-color: transparent;
     border-color: transparent;
@@ -1034,10 +1034,10 @@ a.box:active {
     text-decoration: underline; }
     .button.is-text:hover, .button.is-text.is-hovered, .button.is-text:focus, .button.is-text.is-focused {
       background-color: var(--bg-sub);
-      color: #363636; }
+      color: var(--color-bis); }
     .button.is-text:active, .button.is-text.is-active {
       background-color: #e8e8e8;
-      color: #363636; }
+      color: var(--color-bis); }
     .button.is-text[disabled],
     fieldset[disabled] .button.is-text {
       background-color: transparent;
@@ -1155,17 +1155,17 @@ a.box:active {
     padding: 0.5em 0.75em;
     vertical-align: top; }
   .content table th {
-    color: #363636; }
+    color: var(--color-bis); }
     .content table th:not([align]) {
       text-align: left; }
   .content table thead td,
   .content table thead th {
     border-width: 0 0 2px;
-    color: #363636; }
+    color: var(--color-bis); }
   .content table tfoot td,
   .content table tfoot th {
     border-width: 2px 0 0;
-    color: #363636; }
+    color: var(--color-bis); }
   .content table tbody tr:last-child td,
   .content table tbody tr:last-child th {
     border-bottom-width: 0; }
@@ -1282,7 +1282,7 @@ a.box:active {
 
 .table {
   background-color: var(--bg-main);
-  color: #363636; }
+  color: var(--color-bis); }
   .table td,
   .table th {
     border: 1px solid var(--border);
@@ -1306,8 +1306,8 @@ a.box:active {
       color: rgba(0, 0, 0, 0.7); }
     .table td.is-dark,
     .table th.is-dark {
-      background-color: #363636;
-      border-color: #363636;
+      background-color: var(--color-bis);
+      border-color: var(--color-bis);
       color: var(--bg-main); }
     .table td.is-primary,
     .table th.is-primary {
@@ -1353,7 +1353,7 @@ a.box:active {
       .table th.is-selected strong {
         color: currentColor; }
   .table th {
-    color: #363636; }
+    color: var(--color-bis); }
     .table th:not([align]) {
       text-align: left; }
   .table tr.is-selected {
@@ -1371,13 +1371,13 @@ a.box:active {
     .table thead td,
     .table thead th {
       border-width: 0 0 2px;
-      color: #363636; }
+      color: var(--color-bis); }
   .table tfoot {
     background-color: transparent; }
     .table tfoot td,
     .table tfoot th {
       border-width: 2px 0 0;
-      color: #363636; }
+      color: var(--color-bis); }
   .table tbody {
     background-color: transparent; }
     .table tbody tr:last-child td,
@@ -1473,7 +1473,7 @@ a.box:active {
     background-color: var(--bg-sub);
     color: rgba(0, 0, 0, 0.7); }
   .tag:not(body).is-dark {
-    background-color: #363636;
+    background-color: var(--color-bis);
     color: var(--bg-main); }
   .tag:not(body).is-primary {
     background-color: var(--text-main);
@@ -1575,7 +1575,7 @@ a.tag:hover {
     vertical-align: middle; }
 
 .title {
-  color: #363636;
+  color: var(--color-bis);
   font-size: 1.563rem;
   font-weight: 600;
   line-height: 1.125; }
@@ -1607,7 +1607,7 @@ a.tag:hover {
   font-weight: 400;
   line-height: 1.25; }
   .subtitle strong {
-    color: #363636;
+    color: var(--color-bis);
     font-weight: 600; }
   .subtitle:not(.is-spaced) + .title {
     margin-top: -1.25rem; }
@@ -1660,7 +1660,7 @@ a.tag:hover {
   background-color: var(--bg-main);
   border-color: var(--border);
   border-radius: 4px;
-  color: #363636; }
+  color: var(--color-bis); }
   .input::-moz-placeholder, .textarea::-moz-placeholder, .select select::-moz-placeholder {
     color: rgba(54, 54, 54, 0.3); }
   .input::-webkit-input-placeholder, .textarea::-webkit-input-placeholder, .select select::-webkit-input-placeholder {
@@ -1727,7 +1727,7 @@ a.tag:hover {
     .is-light.input:focus, .is-light.textarea:focus, .is-light.is-focused.input, .is-light.is-focused.textarea, .is-light.input:active, .is-light.textarea:active, .is-light.is-active.input, .is-light.is-active.textarea {
       box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25); }
   .is-dark.input, .is-dark.textarea {
-    border-color: #363636; }
+    border-color: var(--color-bis); }
     .is-dark.input:focus, .is-dark.textarea:focus, .is-dark.is-focused.input, .is-dark.is-focused.textarea, .is-dark.input:active, .is-dark.textarea:active, .is-dark.is-active.input, .is-dark.is-active.textarea {
       box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25); }
   .is-primary.input, .is-primary.textarea {
@@ -1809,7 +1809,7 @@ a.tag:hover {
 
 .card-header-title {
   align-items: center;
-  color: #363636;
+  color: var(--color-bis);
   display: flex;
   flex-grow: 1;
   font-weight: 700;
@@ -1993,7 +1993,7 @@ a.tag:hover {
         background-color: var(--bg-sub);
         color: rgba(0, 0, 0, 0.7); } }
   .navbar.is-dark {
-    background-color: #363636;
+    background-color: var(--color-bis);
     color: var(--bg-main); }
     .navbar.is-dark .navbar-brand > .navbar-item,
     .navbar.is-dark .navbar-brand .navbar-link {
@@ -2035,7 +2035,7 @@ a.tag:hover {
         background-color: #292929;
         color: var(--bg-main); }
       .navbar.is-dark .navbar-dropdown a.navbar-item.is-active {
-        background-color: #363636;
+        background-color: var(--color-bis);
         color: var(--bg-main); } }
   .navbar.is-primary {
     background-color: var(--text-main);
