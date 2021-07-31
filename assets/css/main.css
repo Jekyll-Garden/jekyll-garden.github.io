@@ -1853,7 +1853,6 @@ a.tag:hover {
   margin-bottom: 1rem; }
 
 .navbar {
-  background-color: var(--bg-main);
   min-height: 3.25rem;
   position: relative;
   z-index: 30; }
