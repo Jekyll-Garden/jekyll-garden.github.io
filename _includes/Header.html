@@ -32,7 +32,7 @@
 <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="../index.html">
-        <img src="https://cdn.pixabay.com/photo/2016/08/25/07/30/red-1618916_1280.png" width="28" height="28"
+        <img src="../assets/img/logo.png" width="28" height="28"
           style="margin-right: 16px;">
         <strong> Digital Garden</strong>
       </a>
@@ -55,19 +55,22 @@
     
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item">
-          About
+        <a href="./posts/how-to"  class="navbar-item">
+          How To
         </a>
-        <a class="navbar-item">
-          Notes
+        <a href="https://jekyll-garden.github.io/jekyll-garden/" class="navbar-item">
+          GitHub
         </a>
-        <a class="navbar-item">
-          Essays
+        <a href="https://jekyllrb.com/"  class="navbar-item">
+          Jekyll
         </a>
-        <a class="navbar-item">
-          Library
+        <a href="https://obsidian.md/"  class="navbar-item">
+          Obsidian
         </a>
       </div>
+
+      <a href="{{page.url}}" id="theme-toggle" onclick="modeSwitcher()" style="cursor: pointer;"></a>
+
   
       <div class="navbar-end is-hidden-mobile">
         <div class="navbar-item">

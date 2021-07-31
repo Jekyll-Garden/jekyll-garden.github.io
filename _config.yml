@@ -28,10 +28,10 @@ url: "https://simply-jekyll.netlify.app/" # the base hostname & protocol for you
 # your social media links etc
 #######################################################################
 
-heading: Digital Garden
-copyright: 
+heading: Digital Garden # Change this 
+copyright:  
   year: 2021
-  msg: Hiran Venugopalan # This is a mandatory attribute for copyright to be displayed
+  msg: Hiran Venugopalan # This is a mandatory attribute for copyright to be displayed ; If deleting this, edit at footer layout.
 
 
 #####################################################################
@@ -89,7 +89,6 @@ plugins:
   - jekyll-tidy
 
 ## Enable _notes Collection 
-
 collections:
     notes:
       output: true

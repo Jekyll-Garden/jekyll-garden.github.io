@@ -1,17 +1,15 @@
 ---
-title : All Markdown Rendered
+title : Markdown Rendered
 notetype : feed
 date : 01-02-2021
 ---
  
-A quick reference to all markdown properties. I found this from Simple Jekyll theme (but as a post)
+This page contains a quick reference to all markdown properties. 90% of this was part of the [Simple Jekyll](https://github.com/raghuveerdotnet/simply-jekyll) theme, which we forked to built this one. Great job, makers!
 
-*PS : You can use this theme for blogging like other themes by adding posts to _post folder. The feed dosen't list Posts, but search works* (Don't ask me if it's a feature or a bug!)
+By the way, how did you reach this page?  From backlink under [[The story of a hidden note]] or from feed, along with [[Welcome to the garden]]?
 
 * TOC
 {:toc}
-
-Linking this page to [[Welcome to Garden]] to demo backlink!
 
 {:#heading}
 ### Headings 
@@ -147,6 +145,34 @@ Some text to show that the reference links can follow later.
 [arbitrary case-insensitive reference text]: https://www.mozilla.org
 [1]: http://slashdot.org
 [link text itself]: http://www.reddit.com
+
+{:#images}
+### Images
+--- 
+From what I understood, Jekyll doesn't support source files inside collection folders like `_notes`. 
+Currently, what I do is, I upload images and attachments manually to `/assets/img/` and use
+
+```
+From Assets/Img
+
+![Alt Text](/assets/img/logo.png "Title Here")
+```
+to embed images. This is not effective, but works. Also, public URLs work
+
+```
+From URL 
+
+![](https://jekyllrb.com/img/logo-2x.png)
+```
+
+From Assets/Img
+
+![Alt Text](/assets/img/logo.png "Title Here")
+
+From URL 
+
+![](https://jekyllrb.com/img/logo-2x.png)
+
 
 {:#syntax}
 ### Code and Syntax Highlighting

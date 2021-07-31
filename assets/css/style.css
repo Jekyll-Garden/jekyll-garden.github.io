@@ -4,31 +4,44 @@ layout: Stylesheet
 
 @import "/assets/css/highlight.css";
 /* Containers: Body, Container, Box, Main, Header, Content */ 
-:root {
 
-    --heading-font-family: 'IBM Plex Sans', sans-serif;
-    --primary-font-family: 'IBM Plex Sans', sans-serif;
-    --secondary-font-family: 'IBM Plex Sans', sans-serif;
-    
+html, html[data-theme="light"] {
     --bg-main: #FFFFFF;
     --bg-sub: #FAFAFC;
     --text-main: #18181C;
     --text-sub: #5D5D67;
     --link: #2380ED;
     --border: #E5E5E5;
-    --card-drop-shadow: 0px 12px 32px rgba(27, 25, 36, 0.12);
-    
-    --bg-main-inverted: #18181C;
-    --bg-sub-inverted: #262626;
-    --text-main-inverted: #FAFAFC; 
-    --text-sub-inverted: #FFFFFF;
-    --link-inverted: #6D9EFF;
-    --border-inverted: #353535;
-    --card-drop-elevate: 0px 12px 32px #1A1A1A;
+}
 
-    --border-transparent: 1px solid transparent;
-    --border-value: 1px solid $border;
-    --transition-speed: 0.2s; 
+html[data-theme="dark"] {
+    --bg-main: #18181C;
+    --bg-sub: #262626;
+    --text-main: #FAFAFC;
+    --text-sub: #FFFFFF;
+    --link: #6D9EFF;
+    --border: #353535;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    html, html[data-theme="dark"] {
+        --bg-main: #18181C;
+        --bg-sub: #262626;
+        --text-main: #FAFAFC;
+        --text-sub: #FFFFFF;
+        --link: #6D9EFF;
+        --border: #353535;
+    }
+
+    html[data-theme="light"] {
+	    --bg-main: #FFFFFF;
+        --bg-sub: #FAFAFC;
+        --text-main: #18181C;
+        --text-sub: #5D5D67;
+        --link: #2380ED;
+        --border: #E5E5E5;
+  } 
 }
 
 
@@ -1472,5 +1485,3 @@ label.margin-toggle:not(.sidenote-number) {
   grid-template-columns: repeat(1, 1fr);
 }
 }
-
-

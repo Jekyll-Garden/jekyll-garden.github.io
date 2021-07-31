@@ -7,7 +7,8 @@ permalink: /
 ---
 
 <div class="block">
-    <h1>Welcome to Notes Garden</h1>
-    <p>This is a simple static theme, meant for Atomic Note publishing, based on Simple Jekyll theme. More to come!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lorem elit, rutrum et nibh ac, vulputate mollis lorem. Fusce at lectus id risus scelerisque suscipit. Vestibulum nec lobortis ex. Proin augue odio, euismod a vehicula ut, auctor ac turpis. Morbi eget facilisis turpis, quis tincidunt neque. Nulla facilisi. Pellentesque porta vel purus eget vulputate. Etiam sodales tincidunt nibh, eget pharetra augue aliquam id. Praesent varius egestas leo, ut luctus risus molestie ut. Integer sapien neque, efficitur vel leo in, aliquet lacinia elit. Nulla a magna ut dui blandit tempus id nec sem. </p>
+<h1>Welcome to the Garden!</h1>
+
+<p>This is a simple Jekyll theme created for building a digital garden with Obsidian and Github Pages. You have to fork this theme to your Github account, configure Github pages, and start using the `_notes` folder as the Obsidian vault. Check etailed documentation and my workflow. This theme is a fork of the Simple Jekyll theme. Check Gatsby-Garden to see the gatsby version of this theme. (Edit `Index.md` to modify this text)</p>
+
 </div>
