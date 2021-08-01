@@ -258,7 +258,7 @@ a {
   a strong {
     color: currentColor; }
   a:hover {
-    color: var(--color-bis); }
+    color: var(--text-main); }
 
 code {
   background-color: var(--bg-sub);
@@ -531,13 +531,13 @@ a.has-text-light:hover, a.has-text-light:focus {
   background-color: var(--bg-sub); !important; }
 
 .has-text-dark {
-  color: var(--main-text) !important; }
+  color: var(--text-main) !important; }
 
 a.has-text-dark:hover, a.has-text-dark:focus {
   color: #1c1c1c !important; }
 
 .has-background-dark {
-  background-color: var(--main-text) !important; }
+  background-color: var(--text-main) !important; }
 
 .has-text-primary {
   color: var(--text-main) !important; }
@@ -606,10 +606,10 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   background-color: #242424 !important; }
 
 .has-text-grey-darker {
-  color: var(--main-text) !important; }
+  color: var(--text-main) !important; }
 
 .has-background-grey-darker {
-  background-color: var(--main-text) !important; }
+  background-color: var(--text-main) !important; }
 
 .has-text-grey-dark {
   color: #4a4a4a !important; }
@@ -1710,15 +1710,15 @@ a.tag:hover {
   background-color: var(--bg-main);
   border-color: var(--border);
   border-radius: 4px;
-  color: var(--color-bis); }
+  color: var(--text-main); }
   .input::-moz-placeholder, .textarea::-moz-placeholder, .select select::-moz-placeholder {
-    color: rgba(54, 54, 54, 0.3); }
+    color: var(--text-main); }
   .input::-webkit-input-placeholder, .textarea::-webkit-input-placeholder, .select select::-webkit-input-placeholder {
-    color: rgba(54, 54, 54, 0.3); }
+    color: var(--text-main); }
   .input:-moz-placeholder, .textarea:-moz-placeholder, .select select:-moz-placeholder {
-    color: rgba(54, 54, 54, 0.3); }
+    color: var(--text-main); }
   .input:-ms-input-placeholder, .textarea:-ms-input-placeholder, .select select:-ms-input-placeholder {
-    color: rgba(54, 54, 54, 0.3); }
+    color: var(--text-main); }
   .input:hover, .textarea:hover, .select select:hover, .is-hovered.input, .is-hovered.textarea, .select select.is-hovered {
     border-color: #b5b5b5; }
   .input:focus, .textarea:focus, .select select:focus, .is-focused.input, .is-focused.textarea, .select select.is-focused, .input:active, .textarea:active, .select select:active, .is-active.input, .is-active.textarea, .select select.is-active {
@@ -3819,18 +3819,22 @@ a.navbar-item,
     .section.is-large {
       padding: 18rem 1.5rem; } }
 
-.box {
+.footer {
+  background-color: #fafafa;
+  padding: 3rem 1.5rem 6rem; }
+
+.box-feed {
   cursor: pointer;
   transition: box-shadow 0.2s; }
 
-.box:hover {
+.box-feed:hover {
   box-shadow: 0px 12px 32px rgba(27, 25, 36, 0.12); }
 
-.box h4 {
+.box-feed h4 {
   margin-bottom: 4px;
   transition: color 0.2s; }
 
-.box:hover h4 {
+.box-feed:hover h4 {
   color: var(--link); }
 
 .search-suggestions {
