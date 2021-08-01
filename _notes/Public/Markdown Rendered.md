@@ -155,7 +155,7 @@ Currently, what I do is, I upload images and attachments manually to `/assets/im
 ```
 From Assets/Img
 
-![Alt Text](/assets/img/logo.png "Title Here")
+![Alt Text](/assets/img/1-how-to.png "Title Here")
 ```
 to embed images. This is not effective, but works. Also, public URLs work
 
@@ -167,7 +167,7 @@ From URL
 
 From Assets/Img
 
-![Alt Text](/assets/img/logo.png "Title Here")
+![Alt Text](/assets/img/1-how-to.png "Title Here")
 
 From URL 
 
