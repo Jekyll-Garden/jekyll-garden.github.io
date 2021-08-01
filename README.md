@@ -39,25 +39,26 @@ Your theme is set up just like a normal Jekyll site! To test your theme, run `bu
 The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
 ## 0.2 Version To-Do
-- [ ] Cleanup CSS
+- [x] Cleanup CSS / Partial
 - [x] Cleanup Config
 - [x] Write Readme
 - [x] Write demo pages - Welcome, markdown, unfeed-demo
 - [x] Add sample blog
 - [x] Cleanup Index
 - [x] Cleanup Nav links
-- [ ] Add Links at README --> Welcome to the Garden.
-- [ ] Add links to Workflow at README and Unfeed-demo and how-to-post
+- [x] Dark Theme Support
 - [x] Modify license 
-- [x] Dark Theme Support (Partial; needs testing)
-- [ ] Icon as SVG/Asset (Knows how to do)
-    - [ ] Set `var(--text-sub)` to sun/moon icons
-    - [ ] Replace logo with SVG
 - [x] Check Obsidian image attachment to Jekyll
 - [x] Remove Simple Jekyll Assets
 - [x] Logo & FavIcon
 - [x] Add Github Screenshots (Or create another note, with same note + images)
 - [ ] BUG Tool tip inside tool tip :D 
+- [x] Search to show notes
+- [ ] Add Links at README --> Welcome to the Garden.
+- [ ] Add links to Workflow at README and Unfeed-demo and how-to-post
+- [ ] Replace logo with SVG
+- [x] /posts/ needs page.
+- [x] Add Posts only feed to /posts/
 
 ## Future
 - [ ] Show tags on notes
