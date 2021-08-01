@@ -56,7 +56,7 @@ The theme is available as open source under the terms of the [MIT License](http:
 - [x] Search to show notes
 - [ ] Add Links at README --> Welcome to the Garden.
 - [ ] Add links to Workflow at README and Unfeed-demo and how-to-post
-- [ ] Replace logo with SVG
+- [x] Replace logo with SVG
 - [x] /posts/ needs page.
 - [x] Add Posts only feed to /posts/
 
