@@ -73,13 +73,13 @@
             <!--- CASE 1 : Homepage-->
 
             {%- if page.permalink == "/" -%}
-                <div class="column is-half">
                     {%- if site.preferences.homepage.enabled -%}
                             <!--- Show Homepage -->
                             {%- include Homepage.html -%}
-                            {%- include Footer.html -%}
+                            <script src="/assets/js/modeswitcher.js"></script>
                     {%- else -%}
                             <!--- Show Feed Part -->
+                    <div class="column is-half">
                             {%- include FeedContent.html -%}
                             {%- include Feed.html -%}
                             {%- include Footer.html -%}             
