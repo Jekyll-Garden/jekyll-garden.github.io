@@ -3909,3 +3909,15 @@ a.tag:hover {
     letter-spacing: 0.2em;
     padding-top: 16px;
   }
+
+  .homeblock a {
+    color : var(--link);
+  }
+
+  .homeblock h1 a {
+    color : var(--text-main);
+  }
+
+  .homeblock h1 a:hover {
+    color : var(--link);
+  }
