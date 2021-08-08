@@ -2388,7 +2388,7 @@ body.has-navbar-fixed-bottom {
 
 .navbar-brand,
 .navbar-tabs {
-  align-items: stretch;
+  align-items: center;
   display: flex;
   flex-shrink: 0;
   min-height: 3.25rem; }
@@ -3815,8 +3815,10 @@ a.navbar-item,
       --columnGap: 2rem; } }
 
 .section {
-  padding: 3rem 1rem; }
+  padding: 1rem; }
   @media screen and (min-width: 1024px) {
+    .section {
+      padding: 3rem 1rem; }
     .section.is-medium {
       padding: 9rem 1.5rem; }
     .section.is-large {
