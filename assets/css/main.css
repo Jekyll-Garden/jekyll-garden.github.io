@@ -3815,7 +3815,7 @@ a.navbar-item,
       --columnGap: 2rem; } }
 
 .section {
-  padding: 3rem 1.5rem; }
+  padding: 3rem 1rem; }
   @media screen and (min-width: 1024px) {
     .section.is-medium {
       padding: 9rem 1.5rem; }
@@ -3868,7 +3868,10 @@ a.navbar-item,
 .note-page-section {
   background: var(--bg-main);
   border-radius: 8px;
-  position: relative; }
+  position: relative;
+  padding: 0.75rem;
+  margin: 0 -0.75rem;
+}
 
 .section.is-note .box {
   background: var(--bg-sub); }
