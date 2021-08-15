@@ -87,9 +87,23 @@ header {
 
 main {
     min-height: 300px;
-    padding-right: 10px;
 }
 
+.buttons.for-back-home:not(:last-child) {
+    margin-left: 0;
+    margin-bottom: 1rem;
+}
+
+.navbar-item.navbar-dark-mode__mobile {
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+@media screen and (min-width: 768px) {
+    .buttons.for-back-home:not(:last-child) {
+        margin-left: 2rem;
+    } 
+}
 
 /* Phrasing Style: H1, H2, H3, H4, H5, H6, P, A, UL, LI */
 
@@ -576,8 +590,10 @@ hr {
     list-style: decimal;
     display: inline-block;
     background: var(--bg-sub);
+    /* @hiran, do we need this border radius? - @asim */
     border-radius: 8px;
     width: 100%;
+    margin: 0;
 }
 
 #markdown-toc a {

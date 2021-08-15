@@ -348,6 +348,9 @@ table th {
   text-align: right !important; }
 
 @media screen and (max-width: 768px) {
+  html {
+    font-size: 12px; 
+  }
   .has-text-centered-mobile {
     text-align: center !important; } }
 
@@ -2385,7 +2388,7 @@ body.has-navbar-fixed-bottom {
 
 .navbar-brand,
 .navbar-tabs {
-  align-items: stretch;
+  align-items: center;
   display: flex;
   flex-shrink: 0;
   min-height: 3.25rem; }
@@ -3812,8 +3815,10 @@ a.navbar-item,
       --columnGap: 2rem; } }
 
 .section {
-  padding: 3rem 1.5rem; }
+  padding: 1rem; }
   @media screen and (min-width: 1024px) {
+    .section {
+      padding: 3rem 1rem; }
     .section.is-medium {
       padding: 9rem 1.5rem; }
     .section.is-large {
@@ -3865,7 +3870,10 @@ a.navbar-item,
 .note-page-section {
   background: var(--bg-main);
   border-radius: 8px;
-  position: relative; }
+  position: relative;
+  padding: 0.75rem;
+  margin: 0 -0.75rem;
+}
 
 .section.is-note .box {
   background: var(--bg-sub); }
