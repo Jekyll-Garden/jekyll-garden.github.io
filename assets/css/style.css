@@ -590,8 +590,6 @@ hr {
     list-style: decimal;
     display: inline-block;
     background: var(--bg-sub);
-    /* @hiran, do we need this border radius? - @asim */
-    border-radius: 8px;
     width: 100%;
     margin: 0;
 }
