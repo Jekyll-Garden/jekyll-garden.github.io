@@ -214,7 +214,7 @@ th {
 
 html {
   background-color: var(--bg-sub);
-  font-size: 16px;
+  font-size: 14px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   min-width: 300px;
@@ -348,9 +348,6 @@ table th {
   text-align: right !important; }
 
 @media screen and (max-width: 768px) {
-  html {
-    font-size: 12px; 
-  }
   .has-text-centered-mobile {
     text-align: center !important; } }
 
@@ -1038,6 +1035,16 @@ a.box-feed:active {
     .button.is-text:hover, .button.is-text.is-hovered, .button.is-text:focus, .button.is-text.is-focused {
       background-color: var(--bg-sub);
       color: var(--color-bis); }
+      .button.button__page-back {
+        background-color: var(--bg-sub);
+        color: var(--color-bis);
+      }
+      @media screen and (min-width: 769px), print {
+        .button.button__page-back {
+          background-color: transparent;
+          border-color: transparent;
+        }
+      }
     .button.is-text:active, .button.is-text.is-active {
       background-color: #e8e8e8;
       color: var(--color-bis); }
@@ -1149,7 +1156,6 @@ a.box-feed:active {
 
 .content ol {
   list-style-position: outside;
-  margin-left: 2em;
   margin-top: 1em; }
   .content ol:not([type]) {
     list-style-type: decimal; }
@@ -1164,7 +1170,6 @@ a.box-feed:active {
 
 .content ul {
   list-style: disc outside;
-  margin-left: 2em;
   margin-top: 1em; }
   .content ul ul {
     list-style-type: circle;
@@ -3856,9 +3861,6 @@ a.navbar-item,
 .search-suggestions.content li + li {
   margin-top: 0.5em; }
 
-.note-cards .content {
-  width: 88%; }
-
 .tags.are-medium .tag:not(body) {
   padding: 8px 16px;
   height: 2rem; }
@@ -3885,7 +3887,10 @@ a.navbar-item,
 @media screen and (min-width: 769px), print {
   .section.is-note .column.is-primary-content,
     .note-page-section {
-      padding: 3rem 8rem; } }
+      padding: 3rem 8rem; } 
+  .note-cards .content {
+    width: 88%; }
+    }
 
 @media screen and (min-width: 769px), print {
   .for-back-home {

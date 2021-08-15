@@ -151,28 +151,29 @@ main {
 }
 */
 
+/* Minor third with base font 14px */
 h1 {
-    font-size: 2.441rem;
+    font-size: 2.074rem;
     font-weight: 600;
 }
 
 h2 {
-    font-size: 1.953rem;
+    font-size: 1.728rem;
     font-weight: 600;
 }
 
 h3 {
-    font-size: 1.563rem;
+    font-size: 1.44rem;
     font-weight: 600;
 }
 
 h4 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
 h5 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 400;
 }
 
@@ -181,17 +182,47 @@ h6 {
     font-weight: 600;
 }
 
+
+/* Major third with base font 16px */
+@media screen and (min-width: 769px), print {
+    html {
+        font-size: 16px; 
+    }
+    h1 {
+        font-size: 2.441rem;
+        font-weight: 600;
+    }
+
+    h2 {
+        font-size: 1.953rem;
+        font-weight: 600;
+    }
+
+    h3 {
+        font-size: 1.563rem;
+        font-weight: 600;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    h5 {
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+
+    h6 {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     font-family: 'IBM Plex Sans', sans-serif;
 }
-/*
-a, p, ul, li, ol, table, span, blockquote {
-    color: var(--text-main);
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 16px;  /* Let's set the font-size to something old-man friendly 
-}*/
-
 
 p a,
 ul a,
@@ -590,8 +621,6 @@ hr {
     list-style: decimal;
     display: inline-block;
     background: var(--bg-sub);
-    /* @hiran, do we need this border radius? - @asim */
-    border-radius: 8px;
     width: 100%;
     margin: 0;
 }
@@ -1310,6 +1339,7 @@ label.srs-toggle {
 #copyright-notice {
     font-size: 0.7rem;
     font-weight: 700;
+    text-align: center;
 }
 
 #disqus_thread {
