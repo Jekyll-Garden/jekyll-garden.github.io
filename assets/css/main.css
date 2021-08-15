@@ -1149,7 +1149,6 @@ a.box-feed:active {
 
 .content ol {
   list-style-position: outside;
-  margin-left: 2em;
   margin-top: 1em; }
   .content ol:not([type]) {
     list-style-type: decimal; }
@@ -1164,7 +1163,6 @@ a.box-feed:active {
 
 .content ul {
   list-style: disc outside;
-  margin-left: 2em;
   margin-top: 1em; }
   .content ul ul {
     list-style-type: circle;
