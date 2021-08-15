@@ -1035,6 +1035,16 @@ a.box-feed:active {
     .button.is-text:hover, .button.is-text.is-hovered, .button.is-text:focus, .button.is-text.is-focused {
       background-color: var(--bg-sub);
       color: var(--color-bis); }
+      .button.button__page-back {
+        background-color: var(--bg-sub);
+        color: var(--color-bis);
+      }
+      @media screen and (min-width: 769px), print {
+        .button.button__page-back {
+          background-color: transparent;
+          border-color: transparent;
+        }
+      }
     .button.is-text:active, .button.is-text.is-active {
       background-color: #e8e8e8;
       color: var(--color-bis); }
