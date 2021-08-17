@@ -8,10 +8,11 @@ This is a simple Jekyll theme created for building a digital garden with Obsidia
 _Detailed Installation how-to, with screenshots available [here](https://jekyll-garden.github.io/jekyll-garden/posts/how-to)_
 
 Building a Jekyll website on Github Page is simple and seamless.
-Step 1: Sign-In to Github, visit the theme page and click on 'Use this Template'
-Step 2: Name the forked repo as `yourusername.github.io`
-Step 3: Go to your repo's settings > pages and set the source to your main branch. 
-Step 4 (Optional): If you have a custom domain, set CNAME. 
+
+- Step 1: Sign-In to Github, visit the theme page and click on 'Use this Template'
+- Step 2: Name the forked repo as `yourusername.github.io`
+- Step 3: Go to your repo's settings > pages and set the source to your main branch. 
+- Step 4 (Optional): If you have a custom domain, set CNAME. 
 
 Claps! The Jekyll website with a Note Garden theme is ready. Visit  `yourusername.github.io` to see that. 
 _If it's not working, edit this readme (add something and commit) to trigger static page generation._
@@ -40,19 +41,3 @@ Your theme is set up just like a normal Jekyll site! To test your theme, run `bu
 ## License
 
 The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
-## Next Version Ideas
-- TAGS
-    - [x] Support YAML tags inside notes
-    - [ ] Notes to display Tags between header and content
-    - [ ] List all Tags as chips, above search & feed. 
-    - [ ] Autogenerate Tag content listing pages
-
-- LISTS
-    - [ ] New layout for listing pages (book list, movie list etc)
-    - [ ] Yet to define the design
-
-- LONGFORM
-    - [ ] Layout for longer essays (not blog post)
-    - [ ] Option to transclude notes
-    - [ ] Yet to define the design
