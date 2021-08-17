@@ -5,7 +5,7 @@ This is a simple Jekyll theme created for building a digital garden with Obsidia
 <img align="center" src="./assets/img/screenshot-mixed.png">
 
 ## Installation (Github pages)
-_Detailed Installation how-to, with screenshots available [here](https://jekyll-garden.github.io/jekyll-garden/posts/how-to)_
+_Detailed Installation how-to, with screenshots available [here](https://jekyll-garden.github.io/posts/how-to)_
 
 Building a Jekyll website on Github Page is simple and seamless.
 
