@@ -26,7 +26,7 @@ _If it's not working, edit this readme (add something and commit) to trigger sta
 
 
 ## Credits & Thanks
-- [raghuveerdotnet](https://github.com/raghuveerdotnet), who created [Simply Jekyll theme](https://github.com/raghuveerdotnet/simply-jekyll). This theme is a fork of Simply Jekyll and 90% code is by Raghu.
+- [rgvr](https://github.com/rgvr), who created [Simply Jekyll theme](https://github.com/rgvr/simply-jekyll). This theme is a fork of Simply Jekyll and 90% code is by Raghu.
 - [Asim K T](https://github.com/asimkt), who coded the base HTML.
 - [Santosh Thottingal](https://github.com/santhoshtr), [Binny V A](https://github.com/binnyva), Puttalu who introduced me to Digital Garden, Zettelkasten, Org Mode etc. :)
 - Team [Obsidian](https://obsidian.md/) for making obsidian a [markdown](https://daringfireball.net/projects/markdown/) based product
