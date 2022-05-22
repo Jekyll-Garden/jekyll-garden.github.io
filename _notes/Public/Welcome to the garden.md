@@ -1,11 +1,10 @@
 ---
 title : Welcome to the garden
-notetype : feed
+feed: show
 date : 15-04-2021
 ---
 
-This is a sample atomic note. The file location is `_notes/Public`, and it appears on the note feed. `_notes` is the Obsidian Vault directory. _Check  <a href="../posts/how-to"> how to </a> to know more._ 
+Welcome to digital garden using Obsidian and Jekyll garden theme. This file is located in `_notes/Public`. Check the <a href="{{'/notes' | relative_url}}"> demo </a>, <a href="{{'/post/features' | relative_url}}"> features </a> to know more.
 
-While all files inside this folder get rendered and can be linked, only those notes with `notetype: feed` will be listed in the feed. For example, click on this [[Hidden Note]]!
+Check [[Hidden Note]] to know how to create notes which won't appear on the feed!
 
-Also, backlinks (pages with a link to this page) are listed down. Check that one to see how markdown styles get rendered in this theme.
