@@ -1,6 +1,6 @@
 ---
 title: Hidden Note
-notetype : unfeed
+feed: hide
 date : 01-01-2021
 ---
 
