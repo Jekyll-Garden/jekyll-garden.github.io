@@ -5,4 +5,4 @@ title: List of Lists
 feedformat: row
 ---
 
-LOL. List of Lists ;)
+List of all list!
