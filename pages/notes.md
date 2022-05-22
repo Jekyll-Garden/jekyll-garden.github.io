@@ -2,7 +2,7 @@
 layout: Post
 permalink: /notes
 feedformat: card
-title: Working Notes
+title: Digital Garden
 ---
 
-My Digital garden of atomic notes on topics of interest. Half baked, work in progress notes waiting to be evergreen as time goes! [[About Working Notes]]
+Demo to the feed page. This page lists all content from _notes folder. To hide notes from this feed, add `feed:hide` on note's Frontmatter. Eg:[[Hidden Note]]
