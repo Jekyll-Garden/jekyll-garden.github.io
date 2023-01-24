@@ -125,7 +125,7 @@ h6 {
 p {
     font-size: var(--text-m);
     line-height: var(--text-leading-normal);
-    font-weight: var(--text-normal);
+    font-weight: var(--text-weight-normal);
     margin: 0 0 1em 0;
 }
 
@@ -416,7 +416,7 @@ cite {
 
 blockquote p {
     font-family: inherit;
-    font-size: var(--text-normal);
+    font-size: var(--text-weight-normal);
     margin: 0 !important;
 }
 
