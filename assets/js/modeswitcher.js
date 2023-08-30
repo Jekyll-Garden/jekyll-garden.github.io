@@ -19,11 +19,24 @@ function changeIconImgSrc(src) {
 	document.getElementById("theme-toggle-img--mobile").src = src;
 }
 
-if (systemInitiatedDark.matches) {
+document.addEventListener("DOMContentLoaded", () => {
+	if (systemInitiatedDark.matches) {
 	changeIconImgSrc(iconMoon);
-} else {
+	} else {
+	changeIconImgSrc(iconSun);
+	}
+	if (theme === "dark") {
+	document.documentElement.setAttribute('data-theme', 'dark');
+	sessionStorage.setItem('theme', 'dark');
+	changeIconImgSrc(iconMoon);
+	} else if (theme === "light") {
+	document.documentElement.setAttribute('data-theme', 'light');
+	sessionStorage.setItem('theme', 'light');
 	changeIconImgSrc(iconSun);
 }
+})
+
+
 
 function prefersColorTest(systemInitiatedDark) {
   if (systemInitiatedDark.matches) {
@@ -60,12 +73,3 @@ function modeSwitcher() {
 	}
 }
 
-if (theme === "dark") {
-	document.documentElement.setAttribute('data-theme', 'dark');
-	sessionStorage.setItem('theme', 'dark');
-	changeIconImgSrc(iconMoon);
-} else if (theme === "light") {
-	document.documentElement.setAttribute('data-theme', 'light');
-	sessionStorage.setItem('theme', 'light');
-	changeIconImgSrc(iconSun);
-}
