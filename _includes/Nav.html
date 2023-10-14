@@ -29,12 +29,13 @@
 *
 {%- endcomment -%}
 
-<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" style="padding-left: 0;"; href="{{ site.baseurl }}/index.html">
+<nav class="justify-between items-start self-stretch flex w-full gap-5 max-md:max-w-full max-md:flex-wrap" role="navigation" aria-label="main navigation">
+    <div>
+      <a class="text-slate-500 text-right text-lg font-medium self-center w-[175px] my-auto" href="{{ site.baseurl }}/index.html">
           <h6> {{site.heading}}</h6></a>
           <script src="{{ site.baseurl }}/assets/js/modeswitcher.js"></script>
           <script src="{{ site.baseurl }}/assets/js/Hamburger.js"></script>
+          <!-- TODO: Mobile -->
       <div class="navbar-item navbar-dark-mode__mobile is-hidden-tablet" onclick="modeSwitcher()">
         <div class="buttons">
           <a class="button is-text">
@@ -51,34 +52,28 @@
       </a>
     </div>
     
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a href="{{'/notes' | relative_url}}" class="navbar-item">
+    <div id="navbarBasicExample" class="items-start self-stretch flex max-w-full gap-5 max-md:justify-center">
+      <div class="justify-between items-start self-stretch flex max-w-full gap-4 max-md:justify-center">
+        <a href="{{'/notes' | relative_url}}" class="text-slate-500 text-right text-lg self-stretch items-center flex justify-center py-4">
           Demo Feed
         </a>
-        <a href="../post/how-to" class="navbar-item">
+        <a href="../post/how-to" class="text-slate-500 text-right text-lg self-stretch items-center flex justify-center py-4">
           How To
         </a>
-        <a href="https://github.com/Jekyll-Garden/jekyll-garden.github.io" target="_blank" class="navbar-item">
+        <a href="https://github.com/Jekyll-Garden/jekyll-garden.github.io" target="_blank" class="text-slate-500 text-right text-lg self-stretch items-center flex justify-center py-4">
           Github
         </a>
-        <a href="https://jekyllrb.com/" target="_blank" class="navbar-item">
+        <a href="https://jekyllrb.com/" target="_blank" class="text-slate-500 text-right text-lg self-stretch items-center flex justify-center py-4">
           Jekyll
         </a>
-        <a href="https://obsidian.md/"  target="_blank" class="navbar-item">
+        <a href="https://obsidian.md/"  target="_blank" class="text-slate-500 text-right text-lg self-stretch items-center flex justify-center py-4">
           Obsidian
         </a>
       </div>
-      <div class="navbar-end is-hidden-mobile" onclick="modeSwitcher()" >
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-text">
-              <span class="icon is-small">
-                <img src="{{ '/assets/img/sun.svg' | relative_url }}" id="theme-toggle-img">
-              </span>
-            </a>
-          </div>
-        </div>
+      <div class="text-slate-500 text-right text-lg self-stretch items-center justify-center hidden md:flex" onclick="modeSwitcher()" >
+        <a class="px-4">
+          <img src="{{ '/assets/img/sun.svg' | relative_url }}" id="theme-toggle-img">
+        </a>
       </div>
     </div>
   </nav>
