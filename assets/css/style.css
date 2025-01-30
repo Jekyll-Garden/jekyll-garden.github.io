@@ -196,9 +196,9 @@ main {
 
 /* 04. Buttons*/
 
-.buttons.for-back-home:not(:last-child) {
+/* .buttons.for-back-home:not(:last-child) {
     margin-left: 0;
-}
+} */
 
 .navbar-item.navbar-dark-mode__mobile {
     flex-grow: 1;
