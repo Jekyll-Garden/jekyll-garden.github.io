@@ -1,9 +1,8 @@
 ---
 layout: Post
 permalink: /contact
-feedformat: card
+feedformat: row
 title: Contact Us
-feed: hide
 ---
 
 CONTACT
