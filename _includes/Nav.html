@@ -53,9 +53,12 @@
     
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-        <a href="{{'/notes' | relative_url}}" class="navbar-item">
+        {% if page.url == '/notes' %}
+        <!-- Bu link sadece /notes sayfasında görünecek -->
+        <a href="{{ '/notes' | relative_url }}" class="navbar-item">
           Article
         </a>
+        {% endif %}
         <a href="{{ '/contact' | relative_url }}" class="navbar-item">
           Contact Us
         </a>
