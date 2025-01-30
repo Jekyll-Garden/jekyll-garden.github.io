@@ -2,7 +2,7 @@
 layout: Post
 permalink: /contact
 feedformat: card
-title: Articles
+title: Contact Us
 ---
 
 CONTACT
