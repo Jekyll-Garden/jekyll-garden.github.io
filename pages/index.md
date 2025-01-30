@@ -4,7 +4,7 @@
 
 layout: Post
 permalink: /
-feedformat: static
+
 title: About Project
 ---
 
