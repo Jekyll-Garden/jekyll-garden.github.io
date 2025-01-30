@@ -1,7 +1,7 @@
 ---
 layout: Post
 permalink: /contact
-feedformat: row
+feedformat: static
 title: Contact Us
 ---
 
