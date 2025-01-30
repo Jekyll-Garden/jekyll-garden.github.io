@@ -42,7 +42,7 @@ privatelinks:
 # To enable set "enabled : true" else, use "enabled:false"
 preferences:
   search:
-    enabled: true
+    enabled: 
   wiki_style_link: 
     enabled: true
   pagepreview: 
