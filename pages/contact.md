@@ -3,6 +3,7 @@ layout: Post
 permalink: /contact
 feedformat: card
 title: Contact Us
+feed: hide
 ---
 
 CONTACT
