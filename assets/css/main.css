@@ -497,7 +497,7 @@ a.has-text-black:hover, a.has-text-black:focus {
   color: black !important; }
 
 .has-background-black {
-  background-color: #0a0a0a !important; }
+  background-color: #800020 !important; }
 
 .has-text-light {
   color: var(--color-bg-main); !important; }
@@ -521,7 +521,7 @@ a.has-text-dark:hover, a.has-text-dark:focus {
   color: var(--color-text-main) !important; }
 
 a.has-text-primary:hover, a.has-text-primary:focus {
-  color: #000001 !important; }
+  color: #800020 !important; }
 
 .has-background-primary {
   background-color: var(--color-text-main) !important; }
@@ -1933,10 +1933,10 @@ a.tag:hover {
       .navbar.is-white .navbar-item.has-dropdown:hover .navbar-link,
       .navbar.is-white .navbar-item.has-dropdown.is-active .navbar-link {
         background-color: #f2f2f2;
-        color: #0a0a0a; }
+        color: #800020; }
       .navbar.is-white .navbar-dropdown a.navbar-item.is-active {
         background-color: var(--color-bg-sub);
-        color: #0a0a0a; } }
+        color: #800020; } }
   .navbar.is-black {
     background-color: #800020;
     color: var(--color-bg-sub); }
