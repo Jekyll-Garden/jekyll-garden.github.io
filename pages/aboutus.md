@@ -7,8 +7,7 @@ title: About Us
 
 
 
-
-<img src="civica.png" alt="Açıklama">
+![Alt Text](/assets/img/civica.png "Wow")
 Hi everyone!
 CIVICA Echoes stems from the desire of a group of students from Bocconi University
 and Sciences Po to generate a real impact, helping women around the world and
