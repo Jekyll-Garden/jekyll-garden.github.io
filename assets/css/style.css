@@ -18,7 +18,7 @@ html[data-theme="light"] {
 
 html[data-theme="dark"] {
     --color-bg-main: #800020;
-    --color-bg-sub: #18181C;
+    --color-bg-sub: #800020;
     --color-text-main: #FF9999;
     --color-text-sub: #FF9999;
     --color-text-link: #6D9EFF;
