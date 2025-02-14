@@ -1938,7 +1938,7 @@ a.tag:hover {
         background-color: var(--color-bg-sub);
         color: #0a0a0a; } }
   .navbar.is-black {
-    background-color: #0a0a0a;
+    background-color: #800020;
     color: var(--color-bg-sub); }
     .navbar.is-black .navbar-brand > .navbar-item,
     .navbar.is-black .navbar-brand .navbar-link {
