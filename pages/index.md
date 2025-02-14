@@ -4,8 +4,8 @@
 
 layout: Post
 permalink: /
-title: About Project
+title: CIVIVA Echoes
 ---
 
 
-About project...
+for women, by everyone
