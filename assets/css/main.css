@@ -530,19 +530,19 @@ a.has-text-primary:hover, a.has-text-primary:focus {
   color: var(--color-text-link) !important; }
 
 a.has-text-link:hover, a.has-text-link:focus {
-  color: #1167cc !important; }
+  color: #ffffff !important; }
 
 .has-background-link {
   background-color: var(--color-text-link) !important; }
 
 .has-text-info {
-  color: #3298dc !important; }
+  color: #ffffff !important; }
 
 a.has-text-info:hover, a.has-text-info:focus {
-  color: #207dbc !important; }
+  color: #ffffff !important; }
 
 .has-background-info {
-  background-color: #3298dc !important; }
+  background-color: #ffffff !important; }
 
 .has-text-success {
   color: #48c774 !important; }
