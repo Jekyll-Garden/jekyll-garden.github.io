@@ -1,8 +1,26 @@
-<div class="home-intro">
-    <div class="jumbo">{{site.heading}} </div>
-    <div class="home-sub-text"> <h3>
-        Jekyll Garden is a markdown friendly theme lets you publish your Obsidian vault (or a subset of it) as a Jekyll static website. 
-        Check out the <a href="{{'/notes' | relative_url}}"> demo </a>, <a href="{{'/post/features' | relative_url}}"> features </a> and <a href="{{'/post/how-to' | relative_url}}"> how to</a>.
-        </h3> 
-</div> </div>
+{%- if page.content and page.content != "" -%}
+    <!-- Show content from index.md -->
+    {{ content }}
+{%- else -%}
+    <!-- Show default homepage structure -->
+    <div>
+        <h3>{{ site.heading }}</h3>
+        {%- if site.description -%}
+        <p>{{ site.description }}</p>
+        {%- endif -%}
+        {%- if site.bio -%}
+        <p>{{ site.bio }}</p>
+        {%- endif -%}
+    </div>
+
+    {%- if site.menu -%}
+    <div class="card-grid">
+        {%- for item in site.menu -%}
+        <div class="card">
+            <h4><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }} <span class="arrow">→</span></a></h4>
+        </div>
+        {%- endfor -%}
+    </div>
+    {%- endif -%}
+{%- endif -%}
 

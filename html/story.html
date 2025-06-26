@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bullet Journaling - Working Notes - Hiran Venugopalan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            
+            <nav class="nav">
+                <div class="nav-left">
+                    <a href="index.html">
+                        <img src="logo.svg" alt="Logo" class="logo" />
+                    </a>
+                </div>
+                <div class="nav-right">
+                    <div class="dropdown">
+                        <div class="hamburger">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 6H21M3 12H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="dropdown-menu">
+                            <a href="index.html">About</a>
+                            <a href="index.html">Coaching</a>
+                            <a href="index.html">Now Page</a>
+                            <a href="index.html">Uses</a>
+                            <a href="mailto:hello@hiran.in">Email</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div>
+                <div class="title-group">
+                    <h2>
+                        Bullet Journaling
+                    </h2>
+                    <p>January 15, 2024</p>
+                </div>
+            </div>
+
+            <div>
+                <p>
+                    Bullet journaling is more than just a method of note-taking—it's a comprehensive system for organizing your thoughts, tasks, and goals. Created by Ryder Carroll, this analog system has gained popularity for its flexibility and effectiveness in personal productivity.
+                    At its heart, bullet journaling consists of four main components:
+                </p>
+                <ul>
+                    <li><strong>Index:</strong> A table of contents for your journal</li>
+                    <li><strong>Future Log:</strong> Long-term planning and goals</li>
+                    <li><strong>Monthly Log:</strong> Monthly overview and tasks</li>
+                    <li><strong>Daily Log:</strong> Day-to-day entries and rapid logging</li>
+                </ul>
+
+                <h2>Rapid Logging</h2>
+                <p>
+                    The foundation of bullet journaling is rapid logging—a method of capturing information quickly using short-form notation. Each entry uses a simple bullet point system:
+                </p>
+                <ul>
+                    <li>• Task</li>
+                    <li>○ Event</li>
+                    <li>- Note</li>
+                </ul>
+
+                <h3>Example Code Implementation</h3>
+                <p>
+                    Here's how you might implement a basic bullet journal system in code:
+                </p>
+                <pre><code>class BulletJournal {
+  constructor() {
+    this.index = [];
+    this.futureLog = [];
+    this.monthlyLogs = {};
+    this.dailyLogs = {};
+  }
+  
+  addTask(text, date) {
+    return {
+      type: 'task',
+      text: text,
+      date: date,
+      completed: false
+    };
+  }
+  
+  addEvent(text, date) {
+    return {
+      type: 'event',
+      text: text,
+      date: date
+    };
+  }
+  
+  addNote(text, date) {
+    return {
+      type: 'note',
+      text: text,
+      date: date
+    };
+  }
+}</code></pre>
+
+                <h2>Migration and Reflection</h2>
+                <p>
+                    Regular migration of tasks and reflection on your entries helps maintain focus and identify patterns in your productivity and goals. This process of review and refinement is what makes bullet journaling a living system that evolves with your needs.
+                </p>
+
+                <blockquote>
+                    "The Bullet Journal is designed to help you track the past, organize the present, and plan for the future. It's a mindfulness practice disguised as a productivity system."
+                </blockquote>
+
+                <h2>Customization</h2>
+                <p>
+                    One of the greatest strengths of bullet journaling is its adaptability. While the core system provides structure, you can customize collections, trackers, and layouts to suit your specific needs and preferences.
+                </p>
+
+                <h3>Popular Collections</h3>
+                <ol>
+                    <li><em>Habit Trackers</em> - Monitor daily routines and behaviors</li>
+                    <li><em>Mood Logs</em> - Track emotional patterns over time</li>
+                    <li><em>Reading Lists</em> - Books to read and completed reads</li>
+                    <li><em>Project Planning</em> - Break down complex projects</li>
+                    <li><em>Gratitude Logs</em> - Daily appreciation practice</li>
+                </ol>
+
+                <h2>Digital Adaptation</h2>
+                <p>
+                    While traditionally analog, the principles of bullet journaling can be adapted to digital tools. Apps like <a href="https://notion.so">Notion</a>, <a href="https://obsidian.md">Obsidian</a>, and even simple note-taking apps can incorporate bullet journaling methods for those who prefer digital organization.
+                </p>
+
+                <h3>Inline Code Examples</h3>
+                <p>
+                    You can use <code>inline code</code> for technical terms, or reference specific <code>API endpoints</code> and <code>function names</code> within your text.
+                </p>
+
+                <h2>Table Example</h2>
+                <p>Tables are useful for comparing features or organizing information:</p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Feature</th>
+                      <th>Analog</th>
+                      <th>Digital</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Flexibility</td>
+                      <td>High</td>
+                      <td>Medium</td>
+                    </tr>
+                    <tr>
+                      <td>Searchable</td>
+                      <td>No</td>
+                      <td>Yes</td>
+                    </tr>
+                    <tr>
+                      <td>Customizable</td>
+                      <td>Yes</td>
+                      <td>Yes</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h2>Benefits</h2>
+                <p>
+                    This method helps reduce mental clutter by providing a single place to capture thoughts, tasks, and events. It promotes mindfulness and intentional living through regular reflection and planning.
+                </p>
+
+                <h3>Key Advantages</h3>
+                <ul>
+                    <li><strong>Flexibility:</strong> Adapt to your unique needs</li>
+                    <li><strong>Mindfulness:</strong> Encourages intentional living</li>
+                    <li><strong>Productivity:</strong> Clear task management system</li>
+                    <li><strong>Reflection:</strong> Regular review and improvement</li>
+                </ul>
+
+                <hr>
+
+                <h2>Getting Started</h2>
+                <p>
+                    To begin your bullet journal journey, you'll need:
+                </p>
+                <ul>
+                    <li>A blank notebook (preferably dotted or grid)</li>
+                    <li>A pen you enjoy writing with</li>
+                    <li>Patience to learn the system</li>
+                    <li>Commitment to regular practice</li>
+                </ul>
+
+                <h3>First Steps</h3>
+                <ol>
+                    <li>Number your pages</li>
+                    <li>Create your index</li>
+                    <li>Set up your future log</li>
+                    <li>Start your first monthly log</li>
+                    <li>Begin daily logging</li>
+                </ol>
+
+                <p>
+                    The beauty of bullet journaling lies in its simplicity and flexibility. It's not about creating perfect spreads or following rigid rules—it's about creating a system that works for you and helps you stay organized, focused, and productive.
+                </p>
+
+                <h4>Additional Resources</h4>
+                <p>
+                    For more information, check out the <a href="https://bulletjournal.com">official Bullet Journal website</a> or join the <a href="https://www.reddit.com/r/bulletjournal">Reddit community</a> for inspiration and support.
+                </p>
+
+                <h5>Related Topics</h5>
+                <p>
+                    Consider exploring related productivity systems like <em>Getting Things Done (GTD)</em>, <em>Pomodoro Technique</em>, and <em>Time Blocking</em> to complement your bullet journal practice.
+                </p>
+
+                <h6>Final Thoughts</h6>
+                <p>
+                    Remember, the best system is the one you'll actually use. Start simple and build complexity as needed.
+                </p>
+            </div>
+
+            <div class="links-section">
+                <h6>Links to the Notes</h6>
+                <ul class="links-grid">
+                    <li><a href="index.html">Use your hands to think</a></li>
+                    <li><a href="index.html">Explaining the Obvious</a></li>
+                </ul>
+            </div>
+
+            <div class="footer">
+                <div class="footer-left">
+                    <h6>© 2024 • Contents under CC-BY-NC • Credits</h6>
+                </div>
+                <div class="footer-right">
+                    <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10" cy="10" r="8" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const dropdown = document.querySelector('.dropdown');
+        
+        hamburger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.classList.toggle('active');
+            dropdown.classList.toggle('active');
+        });
+        
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.dropdown')) {
+                hamburger.classList.remove('active');
+                dropdown.classList.remove('active');
+            }
+        });
+
+        // Theme toggle
+        const themeToggle = document.querySelector('.theme-toggle');
+        const root = document.documentElement;
+        function setTheme(theme) {
+            root.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        }
+        // Initial theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) setTheme(savedTheme);
+        themeToggle.addEventListener('click', function() {
+            const isDark = root.getAttribute('data-theme') === 'dark';
+            setTheme(isDark ? 'light' : 'dark');
+        });
+    </script>
+</body>
+</html> 

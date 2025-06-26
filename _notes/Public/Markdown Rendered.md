@@ -228,15 +228,23 @@ But let's throw in a <b>tag</b>.
 ### Math expressions
 ---
 
-You can write math expressions using the $$\LateX$$ [markup language](https://en.wikipedia.org/wiki/LaTeX) between double dollar signs : \$$...$$. They can be written inline or as a single block.
+You can write math expressions using the $$\LateX$$ [markup language](https://en.wikipedia.org/wiki/LaTeX) between double dollar signs: `$$...$$`. They can be written inline or as a single block.
 
-For example,
+For example, the following block:
 
-\$$P(A|B) = \frac{P(B | A)\cdot P(A)}{P(B)}$$ will render as :
+```
+$$
+P(A|B) = \frac{P(B | A)\cdot P(A)}{P(B)}
+$$
+```
 
-$$P(A|B) = \frac{P(B | A)\cdot P(A)}{P(B)}$$
+will render as:
 
-Please note that for a math block to be displayed correctly, it needs to be separated by an empty line, above and below. Besides, the pipe character | may conflict with markdown : it is recommended to use \vert instead.
+$$
+P(A|B) = \frac{P(B | A)\cdot P(A)}{P(B)}
+$$
+
+Please note that for a math block to be displayed correctly, it needs to be separated by an empty line above and below. Besides, the pipe character | may conflict with markdown: it is recommended to use \vert instead.
 
 {:#tables}
 ### Tables
@@ -375,20 +383,3 @@ Here are some things to try out:
 
 {:.regular-sans}
 ```
-Here's a line for us to start with.
-
-This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
-
-This line is also a separate paragraph, but...
-This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
-```
-
-Here's a line for us to start with.
-
-This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
-
-This line is also a separate paragraph, but...
-This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
-
-
-License: CC-BY
