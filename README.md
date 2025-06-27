@@ -1,255 +1,93 @@
 # Jekyll Garden
 
-A clean, minimal Jekyll theme that makes publishing your Obsidian vault as a static website incredibly easy. Jekyll Garden bridges the gap between private knowledge management and public sharing.
+A simple Jekyll theme that turns your Obsidian notes into a beautiful website. Perfect for sharing your thoughts and knowledge online. If you use Obsidian for note-taking, this theme makes it easy to publish your markdown files as a connected website with wiki-style links and full-text search.
 
-## What is Jekyll Garden?
 
-Jekyll Garden is a Jekyll theme designed for digital gardening - a way to publish interconnected notes that grow and evolve over time. Think of it as your personal Wikipedia on the web.
+### What it does
 
-### Key Features
+Jekyll Garden connects your notes together with simple `[[note title]]` links, just like in Obsidian. You can find any note quickly with the built-in search that works as you type. The design focuses on your content with a clean, minimal look that works great on phones, tablets, and computers. Choose between dark and light themes, and when you want to write traditional blog posts, you can do that too. The theme also supports mathematical expressions if you need to write equations.
 
-- **Wiki-style Links**: Use `[[note title]]` syntax just like in Obsidian
-- **Automatic Backlinks**: See which notes link to the current one
-- **Full-text Search**: Find content quickly across all notes
-- **Clean Design**: Minimal, typography-focused design
-- **Dark/Light Theme**: Toggle between themes with persistent preference
-- **Traditional Blogging**: Support for chronological blog posts
-- **Math Expressions**: KaTeX support for mathematical content
-- **Responsive**: Works beautifully on all devices
+## Getting Started
 
-## Quick Start
+Getting started is straightforward. First, download this theme to your computer. Then edit the settings in the `_config.yml` file with your website information. Add your notes to the `_notes` folder, and finally deploy to GitHub Pages, Netlify, or any web hosting service.
 
-1. **Fork or clone** this repository
-2. **Configure** your site in `_config.yml`
-3. **Add your notes** to the `_notes` folder
-4. **Deploy** to GitHub Pages, Netlify, or any static hosting
+## Basic Setup
 
-## Configuration
-
-### Basic Setup
+Edit `_config.yml` with your information:
 
 ```yaml
-# Site Configuration
-title: "Your Digital Garden"
+title: "My Website"
 heading: "Your Name"
 description: "A brief description of your site"
-bio: "A longer bio about yourself and what you do."
 url: "https://yoursite.com"
-email: "hello@yoursite.com"
 ```
 
-### Menu Items
+### Deployment Options
 
+You can deploy your site to a subdomain (like `notes.yoursite.com`) or a subdirectory (like `yoursite.com/notes`):
+
+**For subdomains:**
 ```yaml
-# Menu Items
-menu:
-  - title: "Notes"
-    url: "/notes"
-  - title: "Blog"
-    url: "/blog"
-  - title: "About"
-    url: "/about"
+url: "https://notes.yoursite.com"
+baseurl: ""
 ```
 
-### Preferences
-
+**For subdirectories:**
 ```yaml
-# Preferences (controls template behavior)
-preferences:
-  homepage:
-    enabled: true
-  search:
-    enabled: true
-  backlinks:
-    enabled: true
-  pagepreview:
-    enabled: true
-  wiki_style_link:
-    enabled: true
+url: "https://yoursite.com"
+baseurl: "/notes"
 ```
+
+See `SUBDOMAIN_SETUP.md` for more details.
 
 ## Writing Notes
 
-### Front Matter
+### Creating a Note
 
-Each note should have YAML front matter:
+Each note is just a markdown file with a title. You write your content in markdown format, just like you would in Obsidian or any other markdown editor.
 
 ```yaml
 ---
-title: "Your Note Title"
-date: 2024-01-15
-feed: "show"  # or "hide" to exclude from feeds
+title: "My First Note"
+date: 2025-01-15
 ---
 ```
 
-### Wiki Links
+## Features
 
-Use `[[note title]]` to create internal links:
+### Linking Notes Together
+Connect your notes by using `[[note title]]` to link to other notes. This creates the same kind of connections you're used to in Obsidian, but now they work on your website too.
 
-```markdown
-This note relates to [[Another Note]] and [[Yet Another Note]].
-```
 
-### External Links
+### Simple Linking
+The linking system works just like Obsidian. Write `[[note title]]` and the links are created automatically. When you hover over a link, you'll see a preview of the connected note.
 
-Use `[[link text::https://example.com]]` for external links:
-
-```markdown
-Check out [[this article::https://example.com/article]] for more info.
-```
-
-## Content Types
-
-### Digital Garden Notes (`_notes/`)
-
-- **Evergreen content**: Knowledge that doesn't expire
-- **Interconnected**: Linked through wiki-style connections
-- **Backlinks**: Automatic discovery of related content
-- **Searchable**: Full-text search across all notes
-
-### Blog Posts (`_posts/`)
-
-- **Chronological**: Time-sensitive content
-- **Categories and tags**: Traditional blog organization
-- **Standard Jekyll**: Follows Jekyll conventions
-- **Hybrid linking**: Can link to garden notes
-
-## Features in Detail
-
-### Wiki-style Linking
-- Use `[[note title]]` syntax for internal links
-- Automatic URL generation from note titles
-- Link previews on hover
-- Support for custom link text: `[[custom text::note title]]`
-
-### Search and Navigation
-- Full-text search powered by Lunr.js
-- Instant search results as you type
-- Keyboard navigation support
-- Search across titles and content
+### Search
+Finding content is easy with the built-in search. It searches through all your notes instantly as you type, looking at both titles and content to help you find exactly what you need.
 
 ### Backlinks
-- Automatic discovery of incoming links
-- See which notes reference the current one
-- Configurable display options
-- Helps discover related content
+See which notes link to the current one you're reading. This helps you discover related content and explore the connections between your ideas, just like the backlinks feature in Obsidian.
 
-### Math Rendering
-- KaTeX support for mathematical expressions
-- Inline math: `$x = y$`
-- Block math: `$$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$`
+### Math
+If you need to write mathematical expressions, the theme supports it. Use `$x = y$` for inline math and `$$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$` for complex equations.
 
-### Responsive Design
-- Mobile-first approach
-- Touch-friendly navigation
-- Adaptive layouts for all screen sizes
-- Fast loading on all devices
+## How to Publishing Your Site
 
-## Deployment
+### GitHub Pages (Free)
+GitHub Pages is the easiest way to get started. Upload your files to GitHub, enable GitHub Pages in the repository settings, and your site goes live automatically.
 
-### GitHub Pages
+### Netlify (Free)
+Netlify is another great option. Connect your GitHub repository to Netlify, and it will build and host your site. Every time you update your files, your site updates automatically.
 
-1. Push your site to a GitHub repository
-2. Enable GitHub Pages in repository settings
-3. Set source to "Deploy from a branch"
-4. Choose your main branch
+### Local Testing
+Test your site locally before publishing. Run `bundle install` to install dependencies, then `bundle exec jekyll serve` to start a local server and see your site in action.
 
-### Netlify
-
-1. Connect your repository to Netlify
-2. Build command: `bundle exec jekyll build`
-3. Publish directory: `_site`
-
-### Vercel
-
-1. Import your repository
-2. Framework preset: Jekyll
-3. Deploy automatically
-
-### Docker
-
-```bash
-# Build and run with Docker
-docker-compose up -d
-```
-
-### Local Development
-
-```bash
-# Install dependencies
-bundle install
-
-# Start local server
-bundle exec jekyll serve
-
-# Build for production
-bundle exec jekyll build
-```
-
-## Customization
-
-### Visual Customization
-
-The theme uses CSS custom properties for easy theming. Edit `assets/css/style.css`:
-
-```css
-:root {
-  --primary-color: #007acc;
-  --text-color: #333;
-  --background-color: #fff;
-  --font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
-```
-
-### Layout Customization
-
-- Create custom layouts in `_layouts/`
-- Modify existing templates
-- Add custom JavaScript and CSS
-- Extend with Jekyll plugins
-
-## Use Cases
-
-### Personal Knowledge Base
-Share your research, notes, and insights with the world.
-
-### Documentation Site
-Create interconnected documentation for projects or organizations.
-
-### Educational Content
-Build courses and tutorials with linked concepts.
-
-### Portfolio
-Showcase your work and thoughts in a connected way.
-
-### Blog and Garden Hybrid
-Combine traditional blogging with digital gardening.
-
-## Examples and Documentation
-
-- **Getting Started**: [[Getting Started]] - Step-by-step setup guide
-- **Wiki Links**: [[Wiki Links Explained]] - How to use wiki-style linking
-- **Markdown**: [[Markdown Examples]] - Complete markdown reference
-- **Search**: [[Search and Navigation]] - Navigation and search features
-- **Customization**: [[Customization Guide]] - Theming and configuration
+### Customization
+Change the look of your site by editing the `assets/css/style.css` file. You can modify colors, fonts, and other visual elements to match your preferences. If you want to customize the layout, you can modify files in the `_layouts/` folder. Add your own CSS and JavaScript as needed, but remember to keep it simple.
 
 ## Contributing
-
-Jekyll Garden is open source and welcomes contributions:
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
+Found a bug or have an idea for improvement? Contributions are welcome. Fork the repository, make your changes, and submit a pull request.
 
 ## License
 
-MIT License - see LICENSE file for details.
-
-## Credits
-
-See [[Credits]] for acknowledgments and contributors.
-
----
-
-*Jekyll Garden - Where knowledge grows and connects.*
+MIT License - use it freely for any project.

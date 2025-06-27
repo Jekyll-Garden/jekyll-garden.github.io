@@ -7,24 +7,6 @@ permalink: /
 title: Jekyll Garden
 ---
 
-<div>
-  <h3>{{ site.heading }}</h3>
-  <p>A brief description of your site</p>
-  <p>A longer bio about yourself and what you do.</p>
-  
-  <div>
-    <a href="mailto:{{ site.email }}" class="btn">Get in touch</a>
-    <a href="{{ site.baseurl }}/notes" class="btn">View Notes</a>
-  </div>
-</div>
+Jekyll Garden is a simple theme that turns your Obsidian notes into a beautiful website. If you use Obsidian for note-taking, this theme makes it easy to publish your markdown files as a connected website with wiki-style links and full-text search.
 
-<div class="card-grid">
-  <div class="card">
-    <h4><a href="{{ site.baseurl }}/notes">Working Notes <span class="arrow">→</span></a></h4>
-    <p>Ongoing thoughts and ideas.</p>
-  </div>
-  <div class="card">
-    <h4><a href="{{ site.baseurl }}/about">About <span class="arrow">→</span></a></h4>
-    <p>Learn more about me.</p>
-  </div>
-</div>
+Start by reading [[Getting Started]] to set up your own Jekyll Garden. Learn how to use [[Wiki Links]] to connect your notes, explore the [[Markdown Guide]] for formatting, and customize your site with the [[Customization]] guide. When you're ready to share your notes online, follow the [[Deployment]] instructions.

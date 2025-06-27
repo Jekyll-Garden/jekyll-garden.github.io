@@ -1,6 +1,3 @@
----
----
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,19 +22,28 @@
     {%- endif -%}
 
     <title>{%- if page.title -%}{{ page.title }} - {%- endif -%}{{ site.heading }}</title>
-    <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
     <link rel="canonical" href="{{site.url}}{{page.url}}" />
-    <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/profile.png">
+    {%- if site.apple_touch_icon -%}
+    <link rel="apple-touch-icon" href="{{ site.baseurl }}{{ site.apple_touch_icon }}">
+    {%- endif -%}
     {%- if site.favicon -%}
     <link rel="icon" href="{{ site.baseurl }}{{ site.favicon }}" type="image/svg+xml" sizes="any" />
     {%- endif -%}
+    {%- if site.css_file -%}
+    <link href="{{ site.baseurl }}{{ site.css_file }}" rel="stylesheet" media="all" class="default" />
+    {%- else -%}
     <link href="{{ site.baseurl }}/assets/css/style.css" rel="stylesheet" media="all" class="default" />
+    {%- endif -%}
     {%- if site.katex -%}
     <link href="{{ site.baseurl }}/assets/css/vendor/Katex.css" rel="stylesheet" media="all" class="default" />
     {%- endif -%}
 
     <!--[if IE]>
-        <link href="/assets/css/ie-target.css" rel="stylesheet" type="text/css"/>
+        {%- if site.ie_css -%}
+        <link href="{{ site.baseurl }}{{ site.ie_css }}" rel="stylesheet" type="text/css"/>
+        {%- else -%}
+        <link href="{{ site.baseurl }}/assets/css/ie-target.css" rel="stylesheet" type="text/css"/>
+        {%- endif -%}
     <![endif]-->
     <!--<link href="/assets/css/prism.css" rel="stylesheet" />-->
     <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
@@ -51,33 +57,27 @@
             <!-- Homepage Layout-->
             {%- if page.permalink == "/" -%}
                 {%- if site.preferences.homepage.enabled -%}
-                    <!--- Show Homepage -->
-                    {%- include Homepage.html -%}
+                    <!--- Show content from index.md when homepage is enabled -->
+                    {%- include Content.html -%}
                 {%- else -%}
-                    <!--- Show Feed Part -->
+                    <!--- Show content from notes.md + search + feed when homepage is disabled -->
                     <h1>{{page.title}}</h1>
                     {%- include Content.html -%}
+                    {%- include Search.html -%}
                     {%- include Feed.html -%}
                 {%- endif -%}
             {%- endif -%}
 
             <!--- Notes Feed Layout-->
-            {%- if page.feedformat -%}
+            {%- if page.permalink == "/notes" -%}
                 <h1>{{page.title}}</h1>
                 {%- include Content.html -%}
+                {%- include Search.html -%}
                 {%- include Feed.html -%}
             {%- endif -%}
 
             <!--- Notes Layout-->
             {%- if page.content-type == "notes" -%}
-                <!--- List type Note Layout-->
-                {%- if page.format == "list" -%}
-                <style>
-                    li {border-bottom: 1px solid var(--border); list-style: none; padding: 0.4rem 0 0.4rem 0;}
-                    .content ul { padding-left: 0px;}
-                    h3 {padding-top: 1rem; padding-bottom: 0rem;}
-                </style>                    
-                {%- endif -%}
                 <h1>{{page.title}}</h1>
                 {%- include Content.html -%}
                 {%- if site.preferences.backlinks.enabled -%}
@@ -100,8 +100,24 @@
                 {%- include Content.html -%}
             {%- endif -%}
             
+            <!--- Blog Feed Layout-->
+            {%- if page.permalink == "/blog" -%}
+                <div class="related-wrapper">
+                {% assign post_items = site.posts | sort: "date" | reverse %}
+                {% for post_items in post_items %}
+                    {%- if post_items.feed == "show" -%}
+                            <div class="notelist-feed">
+                                <a href="{{ site.baseurl }}{{post_items.url}}">
+                                    <p>{{ post_items.title }}</p>
+                                </a>
+                            </div>
+                    {%- endif -%}
+                {%- endfor -%}
+                </div>
+            {%- endif -%}
+
             {%- include Footer.html -%}
         </div>
     </div>
 </body>
-</html>
+</html> 

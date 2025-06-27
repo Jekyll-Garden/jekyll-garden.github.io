@@ -24,7 +24,7 @@
 # Preferences (controls template behavior)
 preferences:
   homepage:
-    enabled: true
+    enabled: false
   search:
     enabled: true
   backlinks:
@@ -38,14 +38,13 @@ preferences:
 title: "Your Site Title"
 heading: "Your Name"
 description: "A brief description of your site"
-bio: "A longer bio about yourself and what you do."
 url: "https://yoursite.com"
 baseurl: ""
-email: "hello@yoursite.com"
 
-# Assets
-favicon: "/assets/img/favicon.svg"
-og_image: "/assets/img/og-image.svg"
+# Asset Configuration
+apple_touch_icon: "/assets/img/profile.png"
+css_file: "/assets/css/style.css"
+ie_css: "/assets/css/ie-target.css"
 
 # Menu Items
 menu:
@@ -56,10 +55,13 @@ menu:
   - title: "About"
     url: "/about"
 
-# Copyright
-copyright:
-  year: "2024"
-  msg: "Contents under CC-BY-NC"
+# Footer
+footer:
+  copyright: "© 2024 Your Name. Contents under CC-BY-NC"
+  credits:
+    enabled: true
+    url: "/credits"
+    text: "Credits"
 
 # Collections
 collections:
@@ -76,12 +78,27 @@ defaults:
       layout: "Post"
       content-type: "notes"
       feed: "show"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "Post"
+      content-type: "post"
+      feed: "show"
+      permalink: /blog/:title/
 
 # Plugins
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-seo-tag
+
+# Private links (for broken wiki links)
+privatelinks:
+  title: "Private Note"
+  msg: "This note hasn't been published yet."
+
+# Math rendering
+katex: true
 
 # Exclude from processing
 exclude:
@@ -92,105 +109,3 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-
-# Private links (for broken wiki links)
-privatelinks:
-  title: "Private Note"
-  msg: "This note hasn't been published yet."
-
-# Math rendering
-katex: true
-
-# Optional: Analytics
-analytics:
-  google: "GA_TRACKING_ID"
-  microanalytics: true
-
-# Optional: Comments
-comments:
-  provider: "disqus"
-  disqus:
-    shortname: "your-disqus-shortname"
-
-# Optional: Newsletter
-newsletter:
-  enabled: true
-  provider: "mailchimp"
-  mailchimp:
-    action: "https://yourdomain.us1.list-manage.com/subscribe/post?u=YOUR_USER_ID&id=YOUR_LIST_ID"
-    hidden_input: "b_YOUR_USER_ID_YOUR_LIST_ID_0"
-
-# Optional: Contact form
-contact:
-  enabled: true
-  email: "hello@yoursite.com"
-
-# Optional: Social media
-social:
-  twitter: "yourusername"
-  github: "yourusername"
-  linkedin: "yourusername"
-  instagram: "yourusername"
-
-# Optional: RSS feed
-feed:
-  path: "feed.xml"
-  limit: 10
-
-# Optional: Sitemap
-sitemap:
-  path: "sitemap.xml"
-  exclude: ["/feed.xml", "/404.html"]
-
-# Optional: Performance
-performance:
-  minify_html: true
-  minify_css: true
-  minify_js: true
-  compress_images: true
-
-# Optional: Security
-security:
-  csp: true
-  hsts: true
-  x_frame_options: "DENY"
-  x_content_type_options: "nosniff"
-  referrer_policy: "strict-origin-when-cross-origin"
-
-# Optional: SEO
-seo:
-  title_separator: " - "
-  description_max_length: 160
-  image_width: 1200
-  image_height: 630
-  twitter_card: "summary_large_image"
-  facebook_app_id: "YOUR_FB_APP_ID"
-
-# Optional: Accessibility
-accessibility:
-  skip_to_content: true
-  focus_visible: true
-  reduced_motion: true
-
-# Optional: Print styles
-print:
-  enabled: true
-  hide_elements: [".nav", ".footer", ".sidebar"]
-
-# Optional: PWA
-pwa:
-  enabled: true
-  name: "Your Site Name"
-  short_name: "Site"
-  description: "Your site description"
-  start_url: "/"
-  display: "standalone"
-  background_color: "#ffffff"
-  theme_color: "#000000"
-  icons:
-    - src: "/assets/img/icon-192.png"
-      sizes: "192x192"
-      type: "image/png"
-    - src: "/assets/img/icon-512.png"
-      sizes: "512x512"
-      type: "image/png"

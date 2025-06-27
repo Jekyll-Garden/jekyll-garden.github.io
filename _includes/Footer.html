@@ -1,15 +1,10 @@
 <div class="footer">
   <div class="footer-left">
     <h6>
-      {%- if site.copyright.year -%}
-        {{ site.copyright.year }}
-      {%- else -%}
-        {{ 'now' | date: "%Y" }}
+      {{ site.footer.copyright }}
+      {%- if site.footer.credits.enabled -%}
+          • <a href="{{ site.baseurl }}{{ site.footer.credits.url }}">{{ site.footer.credits.text }}</a>
       {%- endif -%}
-      {%- if site.copyright.msg -%}
-         • {{ site.copyright.msg }}
-      {%- endif -%}
-       • Credits
     </h6>
   </div>
   <div class="footer-right">
