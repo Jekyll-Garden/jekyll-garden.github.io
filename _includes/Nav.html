@@ -1,84 +1,48 @@
-{%- comment -%}
-*
-* MIT License
-* Copyright (c) 2020 Raghuveer S, Hiran Venugopalan
-*
-* Permission is hereby granted, free of charge, to any person obtaining a copy
-* of this software and associated documentation files (the "Software"), to deal
-* in the Software without restriction, including without limitation the rights
-* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-* copies of the Software, and to permit persons to whom the Software is
-* furnished to do so, subject to the following conditions:
-*
-* The above copyright notice and this permission notice shall be included in all
-* copies or substantial portions of the Software.
-*
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-* SOFTWARE.
-*
-* File: Nav.html
-* Author Raghuveer S, Hiran Venugopalan
-*
-* This file contains the markup for the context menu thingy you see when you right
-* click on the post titles on the home page.
-*
-{%- endcomment -%}
+<nav class="nav">
+  <div class="nav-left">
+    <a href="{{ site.baseurl }}/">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="8" width="16" height="16" rx="4" />
+      </svg>
+    </a>
+  </div>
+  
+  <div class="nav-right">
+    <div class="dropdown">
+      <div class="hamburger">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 6H21M3 12H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="dropdown-menu">
+        {%- if site.menu -%}
+          {%- for item in site.menu -%}
+            <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+          {%- endfor -%}
+        {%- else -%}
+          <a href="{{ site.baseurl }}/">About</a>
+          <a href="{{ site.baseurl }}/notes">Notes</a>
+          <a href="{{ site.baseurl }}/about">About</a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</nav>
 
-<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" style="padding-left: 0;"; href="{{ site.baseurl }}/index.html">
-          <h6> {{site.heading}}</h6></a>
-          <script src="{{ site.baseurl }}/assets/js/modeswitcher.js"></script>
-          <script src="{{ site.baseurl }}/assets/js/Hamburger.js"></script>
-      <div class="navbar-item navbar-dark-mode__mobile is-hidden-tablet" onclick="modeSwitcher()">
-        <div class="buttons">
-          <a class="button is-text">
-            <span class="icon is-small">
-              <img src="{{ '/assets/img/sun.svg' | relative_url }}" id="theme-toggle-img--mobile">
-            </span>
-          </a>
-        </div>
-      </div>
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-    
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a href="{{'/notes' | relative_url}}" class="navbar-item">
-          Demo Feed
-        </a>
-        <a href="../post/how-to" class="navbar-item">
-          How To
-        </a>
-        <a href="https://github.com/Jekyll-Garden/jekyll-garden.github.io" target="_blank" class="navbar-item">
-          Github
-        </a>
-        <a href="https://jekyllrb.com/" target="_blank" class="navbar-item">
-          Jekyll
-        </a>
-        <a href="https://obsidian.md/"  target="_blank" class="navbar-item">
-          Obsidian
-        </a>
-      </div>
-      <div class="navbar-end is-hidden-mobile" onclick="modeSwitcher()" >
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-text">
-              <span class="icon is-small">
-                <img src="{{ '/assets/img/sun.svg' | relative_url }}" id="theme-toggle-img">
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const dropdown = document.querySelector('.dropdown');
+  
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    this.classList.toggle('active');
+    dropdown.classList.toggle('active');
+  });
+  
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.dropdown')) {
+      hamburger.classList.remove('active');
+      dropdown.classList.remove('active');
+    }
+  });
+</script>

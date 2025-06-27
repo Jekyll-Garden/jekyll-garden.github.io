@@ -1,3 +1,5 @@
+// Copyright (c) 2020-2024 Jekyll Garden. Credits: Raghuveer S
+
 /********************************************************************************************
  * 
  * MIT License
@@ -72,7 +74,7 @@
     }
 
     function searchInit() {
-        var dataUrl = "SearchData.json";
+        var dataUrl = "/SearchData.json";
 
         getSearchData(dataUrl)
             .then(function(responseText) {
@@ -82,8 +84,8 @@
 
             var index = lunr(function(){
                 this.ref('id');
-                this.field('title', {boost: 200});
-                this.field('content', {boost: 2});
+                this.field('title', {boost: 500});
+                this.field('content', {boost: 1});
                 this.field('url');
                 this.metadataWhitelist = ['position']
 
@@ -208,17 +210,10 @@
                 resultTitle.classList.add('search-result-title');
                 resultLink.appendChild(resultTitle);
 
-                var resultDoc = document.createElement('div');
-                resultDoc.classList.add('search-result-doc');
-                resultDoc.innerHTML = "<svg class='svg-doc' width='18' height='18' viewBox='0 0 24 24' fill='none'><path d='M13 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V9L13 2Z'  stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/><path d='M13 2V9H20'  stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>";
-
-                resultTitle.appendChild(resultDoc);
-
-                
                 var resultDocTitle = document.createElement('div');
                 resultDocTitle.classList.add('search-result-doc-title');
                 resultDocTitle.innerHTML = doc.doc;
-                resultDoc.appendChild(resultDocTitle);
+                resultTitle.appendChild(resultDocTitle);
                 var resultDocOrSection = resultDocTitle;
                 
                 if (doc.doc != doc.title) {

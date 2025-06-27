@@ -1,8 +1,7 @@
 ---
+title: Notes
 layout: Post
 permalink: /notes
-feedformat: card
-title: Digital Garden
 ---
 
-The feed page shows all notes from `notes` folder. If you want to hide any notes from this feed, add `feed:hide` on note's Frontmatter. Eg:[[Hidden Note]]
+Browse all published notes in your digital garden. Notes are organized by connections, not chronology. Click any note to explore its links and context.
