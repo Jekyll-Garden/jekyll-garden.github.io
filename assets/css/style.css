@@ -39,7 +39,9 @@
   --border: #33343a;
 }
 
-html, body {
+/* smooth transition on theme switching */
+html.theme-transition,
+body.theme-transition {
   transition: background 0.3s, color 0.3s;
 }
 
