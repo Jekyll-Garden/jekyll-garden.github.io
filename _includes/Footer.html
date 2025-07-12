@@ -20,6 +20,7 @@
   // Theme toggle
   const themeToggle = document.querySelector('.theme-toggle');
   const root = document.documentElement;
+  const body = document.body;
   
   function setTheme(theme) {
     root.setAttribute('data-theme', theme);
@@ -33,6 +34,9 @@
   }
   
   themeToggle.addEventListener('click', function() {
+    root.classList.add('theme-transition');
+    body.classList.add('theme-transition');
+    
     const isDark = root.getAttribute('data-theme') === 'dark';
     setTheme(isDark ? 'light' : 'dark');
   });
