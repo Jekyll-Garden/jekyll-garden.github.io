@@ -60,10 +60,9 @@
                     <!--- Show content from index.md when homepage is enabled -->
                     {%- include Content.html -%}
                 {%- else -%}
-                    <!--- Show content from notes.md + search + feed when homepage is disabled -->
+                    <!--- Show content from notes.md + feed when homepage is disabled -->
                     <h1>{{page.title}}</h1>
                     {%- include Content.html -%}
-                    {%- include Search.html -%}
                     {%- include Feed.html -%}
                 {%- endif -%}
             {%- endif -%}
@@ -79,6 +78,9 @@
             <!--- Notes Layout-->
             {%- if page.content-type == "notes" -%}
                 <h1>{{page.title}}</h1>
+                {%- if page.description -%}
+                <p class="note-description">{{ page.description }}</p>
+                {%- endif -%}
                 {%- include Content.html -%}
                 {%- if site.preferences.backlinks.enabled -%}
                 {%- include Backlinks.html -%}

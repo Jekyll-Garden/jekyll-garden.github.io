@@ -4,6 +4,7 @@
   --bg: rgb(255, 252, 240);
   --bg2: rgb(242, 240, 229);
   --text: #6f6e69;
+  --text-muted: #85847d;
   --title: #343331;
   --brand: rgb(58, 169, 159);
   --border: rgb(230, 228, 217);
@@ -34,6 +35,7 @@
   --bg: #18181c;
   --bg2: #23232a;
   --text: #d6d6d6;
+  --text-muted: #9b9ba3;
   --title: #fff;
   --brand: #3ac9b0;
   --border: #33343a;
@@ -68,7 +70,7 @@ body {
   width: 100%;
   min-height: 100vh;
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: center;
   padding-top: var(--space-xl);
 }
@@ -78,6 +80,8 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 var(--space-xl) var(--space-xl);
+  display: flex;
+  flex-direction: column;
 }
 
 .nav {
@@ -328,7 +332,8 @@ a:hover {
 }
 
 .footer {
-  margin-top: var(--space-xl);
+  margin-top: auto;
+  padding-top: var(--space-xl);
   text-align: center;
   display: flex;
   align-items: center;
@@ -432,6 +437,7 @@ li {
 
 strong {
   font-weight: 600;
+  color: var(--title);
 }
 
 em {
@@ -585,11 +591,6 @@ td {
 .notelist-feed {
   border-bottom: 1px solid var(--border);
   padding: var(--space-sm) 0;
-  transition: background 0.3s ease;
-}
-
-.notelist-feed:hover {
-  background: var(--bg2);
 }
 
 .notelist-feed a {
@@ -598,10 +599,30 @@ td {
 }
 
 .notelist-feed p {
-  color: var(--title);
+  color: var(--text-muted);
   margin-bottom: 0;
   font-size: var(--scale-base);
   font-weight: var(--weight-medium);
+  transition: color 0.2s ease;
+}
+
+.notelist-feed:hover p {
+  color: var(--title);
+}
+
+.notelist-feed p.feed-description,
+.notelist-feed:hover p.feed-description {
+  color: var(--text-muted);
+  font-size: var(--scale-sm);
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+.note-description {
+  color: var(--text-muted);
+  font-size: var(--scale-sm);
+  font-weight: 400;
+  margin-bottom: var(--space-sm);
 }
 
 .list-feed {

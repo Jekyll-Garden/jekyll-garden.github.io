@@ -6,6 +6,9 @@
             <div class="notelist-feed">
                 <a href="{{ site.baseurl }}{{note_items.url}}">
                     <p>{{ note_items.title }}</p>
+                    {%- if note_items.description -%}
+                    <p class="feed-description">{{ note_items.description }}</p>
+                    {%- endif -%}
                 </a>
             </div>
     {%- endif -%}
